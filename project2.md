@@ -28,7 +28,7 @@ trainData <- read.csv(file.choose(), na.strings = c("NA", ""))
 testData <- read.csv(file.choose(), na.strings = c("NA", ""))
 ```
 
-Before any processing starts, just examine the data:
+Before any processing starts, just examine the data.  I did not add the output here since it is large and hard to parse:
 
 ```{r}
 head(trainData)
