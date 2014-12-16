@@ -12,7 +12,7 @@ The purpose of this project is to analyze some fitness data and predict what typ
 
 Project Walkthrough:
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+First, load the needed packages and read the data from the CSV files given.
 
 ```{r}
 suppressPackageStartupMessages(library(caret))
