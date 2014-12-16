@@ -96,7 +96,7 @@ print(modRF$results$Accuracy[3])
 print(sum(modRF$results$Accuracy^2)) #very near 3
 ```
 
-99% accuracy.  This is very good, but I am a little worried that the model is overfitted due to using the entire data source as the training set.
+99% accuracy.  This is very good, but I am a little worried that the model is overfitted due to using the entire data source as the training set.  Use the test set as a cross validation exercise as well.  With 99% accuracy, and only 20 samples in the test set, a reasonable error to expect would be either 0 or 5% - in other words, accuracy for the test cases should be 95%.  This is still subject to overfitting, though.
 
 ```{r}
 pred<-predict(modRF, cleanedTestData)
@@ -106,6 +106,7 @@ cleanedTestData$classe <- pred==cleanedTestData$classe
 guess=rep(c("E","D","C","B","A"),4)
 table(guess,pred)
 ```
+According to the grading system, the results of the test cases were 100% accurate, or 0% in error.  
 
 The random guesses (E,D,C,B,A repeated in that order 4 times) had a 30% accuracy compared to the 100% accurary of the random forest.
 
