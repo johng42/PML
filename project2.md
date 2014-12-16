@@ -64,13 +64,13 @@ cleanedTrainData <- cleanedTrainData[-indicesToRemove3]
 cleanedTestData <- cleanedTestData[-indicesToRemove3]
 ```
 
-Now that the data is clean and whittled down to only 6 features ( + classe which is what we are trying to predict), take a quick look at all data.  Nothing fancy, just trying to get a feel for the data.
+Now that the data is clean and whittled down to only 6 features ( + classe which is what we are trying to predict), take a quick look at all data.  Nothing fancy, just trying to get a feel for the data.  If this does not show a graph, see "6features.png" in the repro.
 
 ```{r, echo=FALSE}
 plot(cleanedTrainData)
 ```
 
-num_window and pitch_dumbbell look a little interesting:
+num_window and pitch_dumbbell look a little interesting.  If the graphs don't display in the browser they are in the repo:
 
 ```{r, echo=FALSE}
 plot(cleanedTrainData$pitch_dumbbell, cleanedTrainData$classe)
