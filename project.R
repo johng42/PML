@@ -40,6 +40,12 @@ cleanedTrainData <- cleanedTrainData[-indicesToRemove3]
 cleanedTestData <- cleanedTestData[-indicesToRemove3]
 
 #cleanedTrainData now has ~7 variables (features) and classe
+#take a quick look at plots
+plot(cleanedTrainData)
+#these 2 features look a little interesting (hard to tell from the small plots though)
+plot(cleanedTrainData$pitch_dumbbell, cleanedTrainData$classe)
+plot(cleanedTrainData$num_window, cleanedTrainData$classe)
+#maybe interesting.  Still hard to tell so let's see if the classifiers can sort this out.
 
 #we are given a test set separately from training so the train set is now ready to fit to a model
 #and use classe as data we are trying to fit
